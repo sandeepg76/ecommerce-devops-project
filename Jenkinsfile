@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8a31b02 (Added full Jenkins CI/CD pipeline)
 pipeline {
     agent any
     stages {
@@ -9,6 +13,10 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean package'
+<<<<<<< HEAD
+=======
+                archiveArtifacts artifacts: 'target/*.jar'
+>>>>>>> 8a31b02 (Added full Jenkins CI/CD pipeline)
             }
         }
         stage('SonarQube') {
